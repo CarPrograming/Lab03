@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#Container{
+    width: 40%;
+    height: auto;
+}
+
+#Productimg{
+    width: 60%;
+    height: auto;
+}
+
+#ContainText{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+
+}
