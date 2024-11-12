@@ -67,6 +67,8 @@ class Car {
         priceElement.textContent = `Price: $${this.price}`;
         productDetailsContainer.appendChild(priceElement);
     }
+
+    
    
   }
 
