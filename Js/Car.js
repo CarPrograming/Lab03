@@ -14,19 +14,26 @@ class Car {
     }
 
     ShowProducts(){
-
+        //create element in the index to set the img
         const ImageToShow = document.createElement('img');
+        //saving the img source in a variable
         let CarImage = this.imgCar;
 
+        //assign the src
         ImageToShow.setAttribute('src',CarImage);
-        ImageToShow.setAttribute('alt', `${this.carBrand} ${this.carModel}`);
+        
+        //gettin the container to set the image in it
         const productImgContainer = document.getElementById('ProductImg');
+
+        //adding the img
         productImgContainer.appendChild(ImageToShow);
+
 
         //show all text on the html 
         //geting the id from my container to set information
         const productDetailsContainer = document.getElementById('ContainerProductDetails');
 
+        //create the p tag for every value in our constructor
         const brandElement = document.createElement('p');
         brandElement.textContent = `Brand: ${this.carBrand}`;
         productDetailsContainer.appendChild(brandElement);
@@ -68,7 +75,7 @@ class Car {
         productDetailsContainer.appendChild(priceElement);
     }
 
-    
+
    
   }
 

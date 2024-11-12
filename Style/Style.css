@@ -8,11 +8,14 @@ body {
 
 #Container {
     display: flex;
-    width: 80%; 
+    width: 70%; 
     height: auto;
     gap: 20px; 
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 20px;
+    
+    
+    box-shadow: 0 4px 8px rgba(800, 4, 4, 2); 
 }
 
 #ProductImg {
@@ -29,10 +32,12 @@ body {
 
 #ContainerProductDetails {
     flex: 1;
+    border-left: dashed;
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
-    max-width: 50%; 
+    max-width: 30%; 
     height: auto;
     gap: 10px; 
 }
