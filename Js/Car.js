@@ -15,7 +15,9 @@ class Car {
 
     ShowProducts(){
         //create element in the index to set the img
+        
         const ImageToShow = document.createElement('img');
+        
         //saving the img source in a variable
         let CarImage = this.imgCar;
 
@@ -24,6 +26,7 @@ class Car {
         
         //gettin the container to set the image in it
         const productImgContainer = document.getElementById('ProductImg');
+        productImgContainer.innerHTML = "";
 
         //adding the img
         productImgContainer.appendChild(ImageToShow);
@@ -32,7 +35,7 @@ class Car {
         //show all text on the html 
         //geting the id from my container to set information
         const productDetailsContainer = document.getElementById('ContainerProductDetails');
-
+        productDetailsContainer.innerHTML = "";
         //create the p tag for every value in our constructor
         const brandElement = document.createElement('p');
         brandElement.textContent = `Brand: ${this.carBrand}`;
@@ -82,5 +85,23 @@ class Car {
   const myCar = new Car("Ford",'Mustang #5 "L. John\'s Racing"',"Muscle Car","Blue","60s","1/24 Scale","30527-JADA-BLUE",
     "694365739073","Img/Mustang0.jpg","Window Box",19.99);
 
+    //call method to display the info.
     myCar.ShowProducts();
+
+    //botton to change the img to the next one
+    document.getElementById("NextImageBtn").addEventListener("click", () => {
+      if (myCar.imgCar === "Img/Mustang0.jpg") {
+        myCar.imgCar = "Img/Mustang1.jpg";
+        myCar.ShowProducts();
+      } else if (myCar.imgCar === "Img/Mustang1.jpg") {
+        myCar.imgCar = "Img/Mustang2.jpg";
+        myCar.ShowProducts();
+      } else {
+        
+        myCar.imgCar = "Img/Mustang0.jpg";
+        myCar.ShowProducts();
+      }
+    });
+
+
     
