@@ -23,6 +23,49 @@ class Car {
         const productImgContainer = document.getElementById('ProductImg');
         productImgContainer.appendChild(ImageToShow);
 
+        //show all text on the html 
+        //geting the id from my container to set information
+        const productDetailsContainer = document.getElementById('ContainerProductDetails');
+
+        const brandElement = document.createElement('p');
+        brandElement.textContent = `Brand: ${this.carBrand}`;
+        productDetailsContainer.appendChild(brandElement);
+
+        const modelElement = document.createElement('p');
+        modelElement.textContent = `Model: ${this.carModel}`;
+        productDetailsContainer.appendChild(modelElement);
+
+        const typeElement = document.createElement('p');
+        typeElement.textContent = `Type of vehicle: ${this.vehicleType}`;
+        productDetailsContainer.appendChild(typeElement);
+
+        const colorElement = document.createElement('p');
+        colorElement.textContent = `Color: ${this.Carcolor}`;
+        productDetailsContainer.appendChild(colorElement);
+
+        const decadeElement = document.createElement('p');
+        decadeElement.textContent = `Decade: ${this.decade}`;
+        productDetailsContainer.appendChild(decadeElement);
+
+        const scaleElement = document.createElement('p');
+        scaleElement.textContent = `Scale: ${this.scale}`;
+        productDetailsContainer.appendChild(scaleElement);
+
+        const SKUElement = document.createElement('p');
+        SKUElement.textContent = `SKU: ${this.SKUCar}`;
+        productDetailsContainer.appendChild(SKUElement);
+
+        const UPCElement = document.createElement('p');
+        UPCElement.textContent = `UPC: ${this.UPCCar}`;
+        productDetailsContainer.appendChild(UPCElement);
+
+        const packagingElement = document.createElement('p');
+        packagingElement.textContent = `Packaging: ${this.packaging}`;
+        productDetailsContainer.appendChild(packagingElement);
+
+        const priceElement = document.createElement('p');
+        priceElement.textContent = `Price: $${this.price}`;
+        productDetailsContainer.appendChild(priceElement);
     }
    
   }
