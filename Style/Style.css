@@ -4,18 +4,21 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-color: brown;
 }
 
 #Container {
+    background-color: white;
     display: flex;
     width: 70%; 
     height: auto;
     gap: 20px; 
     padding: 20px;
+    
     border-radius: 20px;
     
+    border: dashed 15px brown;
     
-    box-shadow: 0 4px 8px rgba(800, 4, 4, 2); 
 }
 
 #ProductImg {
@@ -31,8 +34,9 @@ body {
 }
 
 #ContainerProductDetails {
+    background-color: white;
     flex: 1;
-    border-left: dashed;
+    border-left: dashed 10px brown;
     display: flex;
     flex-direction: column;
     text-align: center;
