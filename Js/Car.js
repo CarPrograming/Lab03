@@ -36,6 +36,7 @@ class Car {
         //geting the id from my container to set information
         const productDetailsContainer = document.getElementById('ContainerProductDetails');
         productDetailsContainer.innerHTML = "";
+
         //create the p tag for every value in our constructor
         const brandElement = document.createElement('p');
         brandElement.textContent = `Brand: ${this.carBrand}`;
@@ -88,7 +89,7 @@ class Car {
     //call method to display the info.
     myCar.ShowProducts();
 
-    //botton to change the img to the next one
+    //event listener of a botton to change the img to the next one
     document.getElementById("NextImageBtn").addEventListener("click", () => {
       if (myCar.imgCar === "Img/Mustang0.jpg") {
         myCar.imgCar = "Img/Mustang1.jpg";
@@ -99,6 +100,22 @@ class Car {
       } else {
         
         myCar.imgCar = "Img/Mustang0.jpg";
+        myCar.ShowProducts();
+      }
+    });
+
+    //event listener of a botton to change the img to a previus one
+    document.getElementById("PreviusImageBtn").addEventListener("click", () => {
+  
+      if (myCar.imgCar === "Img/Mustang2.jpg") {
+        myCar.imgCar = "Img/Mustang1.jpg";
+        myCar.ShowProducts();
+      } else if (myCar.imgCar === "Img/Mustang1.jpg") {
+        myCar.imgCar = "Img/Mustang0.jpg";
+        myCar.ShowProducts();
+      } else {
+        
+        myCar.imgCar = "Img/Mustang2.jpg";
         myCar.ShowProducts();
       }
     });
